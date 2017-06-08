@@ -1,0 +1,14 @@
+{
+  "name": "polling-agent",
+  "version": "0.0.0",
+  "description": "canary polling agent",
+  "main": "pollingAgent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "redis": "^0.12.1"
+  }
+}

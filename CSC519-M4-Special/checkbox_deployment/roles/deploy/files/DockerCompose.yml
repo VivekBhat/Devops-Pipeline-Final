@@ -1,0 +1,40 @@
+version: '3' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  app_server: # name of the first service
+    build:
+      context: .
+      dockerfile: node_docker_file # specify the directory of the Dockerfile
+    links:
+      - redis_slave
+    networks:
+      - database
+      - default
+    depends_on:
+      - redis_slave
+
+  web_server: #name of the second service
+    build:
+      context: .
+      dockerfile: nginx_docker_file # specify the directory of the Dockerfile
+    ports:
+      - "${WEB_PORT}:80" #specify ports forewarding
+    links:
+      - app_server # link this service to the database service
+    
+  redis_slave: #name of the second service
+    build:
+      context: .
+      dockerfile: redis_slave_file # specify the directory of the Dockerfile
+    networks:
+      - database
+      - default
+
+networks:
+  database:
+    external:
+      name: mongo
+  
+
+    

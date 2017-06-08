@@ -1,0 +1,1 @@
+checkbox ansible_ssh_port=22 ansible_ssh_host=152.46.16.110
