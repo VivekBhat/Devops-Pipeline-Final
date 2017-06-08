@@ -1,0 +1,42 @@
+---
+- name: Install dependencies
+  become: yes
+  apt: 
+    pkg: "{{item}}" 
+    state: latest
+    update_cache: yes
+  with_items: "{{dependencies}}"
+
+- name: Install Python dependencies
+  become: yes
+  pip: 
+    name: docker-compose
+    version: 1.9.0
+
+- name: Import the Docker repository key
+  apt_key:
+      url: "{{apt_key}}"
+      state: present
+      id: 2C52609D
+
+- name: Add docker apt repository
+  apt_repository:
+    repo: "{{apt_repo}}"
+    update_cache: yes
+
+- name: Install Docker
+  apt:
+      name: docker-engine
+      update_cache: yes
+
+- name: Add vagrant to docker group
+  user:
+    name: vagrant
+    groups: docker
+    append: yes
+
+- name: Get docker compose
+  get_url:
+    url: "{{compose_url}}"
+    dest: "{{compose_path}}"
+    mode: 0755

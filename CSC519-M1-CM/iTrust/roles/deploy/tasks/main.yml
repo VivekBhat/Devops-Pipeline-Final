@@ -1,0 +1,46 @@
+---
+- name: Cloning iTrust
+  git:
+    repo: "https://{{git_id}}:{{git_token}}@github.ncsu.edu/engr-csc326-staff/iTrust-v23.git"
+    dest: "{{home_path}}/iTrust"
+
+- name: Copying Dockerfile template
+  template:
+    src: "templates/Dockerfile.j2"
+    dest: "{{home_path}}/Dockerfile"
+    mode: 0707
+
+- name: Copying itrust-setup script template
+  template:
+    src: "templates/itrust-setup.sh.j2"
+    dest: "{{home_path}}/itrust-setup.sh"
+    mode: 0777
+
+- name: Exporting the war file
+  become: yes
+  command: "mvn package -DskipTests"
+  args:
+    chdir: /home/vagrant/iTrust/iTrust
+
+- name: Copying the war file for building tomcat docker image
+  become: yes
+  copy:
+    src: "{{iTrust_war_path}}"
+    dest: "{{home_path}}/iTrust.war"
+    mode: 777
+    remote_src: True
+
+- name: Build Docker image
+  become: yes
+  command: "docker build -t itrust-docker/tomcat {{home_path}}"
+
+- name: Run Docker compose
+  docker_service:
+    project_name: iTrust
+    definition:
+      version: '2'
+      services:
+        web:
+          image: itrust-docker/tomcat
+          ports:
+            - "8080:8080"

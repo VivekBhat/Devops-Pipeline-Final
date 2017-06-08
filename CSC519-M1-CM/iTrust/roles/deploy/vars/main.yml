@@ -1,0 +1,6 @@
+---
+iTrust_repo: https://github.ncsu.edu/smirhos/iTrust-v23.git
+home_path: /home/vagrant
+iTrust_local_path: /home/vagrant/iTrust
+iTrust_war_path: "{{iTrust_local_path}}/iTrust/target/iTrust-23.0.0.war"
+db_server_url: "{{ansible_ssh_host}}"
