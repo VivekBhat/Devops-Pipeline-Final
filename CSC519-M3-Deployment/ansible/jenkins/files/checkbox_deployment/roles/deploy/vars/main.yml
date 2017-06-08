@@ -1,0 +1,3 @@
+---
+home_path: "/home/{{ansible_user}}"
+home_path_docker: "/home/{{ansible_user}}/Docker"

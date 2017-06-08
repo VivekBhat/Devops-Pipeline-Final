@@ -1,0 +1,22 @@
+---
+- name: Add oracle java apt repository key
+  become: yes
+  apt_repository: repo='ppa:webupd8team/java'
+
+- name: Accept oracle license
+  become: yes
+  debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+  changed_when: false
+
+- name: Install jdk8
+  become: yes
+  apt: 
+    name: "{{item}}"
+    state: latest
+    update_cache: yes
+    cache_valid_time: 86400
+  with_items:
+    - oracle-java8-installer
+    - ca-certificates
+    - oracle-java8-set-default
+    - maven

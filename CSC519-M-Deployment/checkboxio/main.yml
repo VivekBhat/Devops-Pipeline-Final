@@ -1,0 +1,9 @@
+---
+- name: CM for checkbox.io
+  hosts: checkboxio
+  become: yes
+  roles:
+    - git  
+    - node
+    - mongodb
+    - nginx

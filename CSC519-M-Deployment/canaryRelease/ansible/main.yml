@@ -1,0 +1,19 @@
+---
+- name: CM for checkbox.io
+  hosts: AppServer
+  become: yes
+  roles:
+    - git  
+    - node
+    - mongodb
+    - nginx
+    - deployment
+- name: CM for canary checkbox.io
+  hosts: CanaryServer
+  become: yes
+  roles:
+    - git  
+    - node
+    - mongodb
+    - nginx
+    - deploy_canary

@@ -1,0 +1,9 @@
+#!/bin/sh
+export BRANCHNAME=$(git rev-parse --abbrev-ref HEAD)
+export SHA1=$(git rev-parse production)
+export GITHUB_URL=$(git config --get remote.origin.url | sed 's/.git$//')
+export JENKINS_IP={{HOST_IP}}
+
+if [ $BRANCHNAME = 'production' ]; then
+        curl "http://$JENKINS_IP:8080/git/notifyCommit?url=$GITHUB_URL&branches=production&sha1=$SHA1"
+fi

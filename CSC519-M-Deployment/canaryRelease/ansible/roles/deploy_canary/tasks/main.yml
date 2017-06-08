@@ -1,0 +1,59 @@
+---
+- name: Cloning repository
+  git:
+    repo: "https://{{GIT_USER}}:{{GIT_TOKEN}}@{{git_repo}}"
+    dest: "{{home_path}}/checkbox.io"
+    version: canary
+
+- name: Create mongodb Database and User
+  mongodb_user:
+    database: admin
+    name: "{{env_vars.MONGO_USER}}"
+    password: "{{env_vars.MONGO_PASSWORD}}"
+    state: present
+    roles: readWrite,dbAdmin,userAdmin
+
+- name: NPM Install
+  become: yes
+  npm:
+    path: "{{home_path}}/checkbox.io/server-side/site"
+
+- name: Installing forever.js
+  npm:
+    name: forever
+    global: yes
+    state: present
+
+- name: "Check list of Node.js apps running."
+  become: no
+  command: forever list
+  register: forever_list
+  changed_when: false
+ 
+- name: "Start checkbox api server app."
+  become: no
+  shell: forever start server.js
+  args:
+   chdir: "{{home_path}}/checkbox.io/server-side/site/"
+  environment: "{{env_vars}}"
+  when: "forever_list.stdout.find('server.js') == -1"
+
+- name: update config file
+  blockinfile:
+    dest: "{{nginx_config_path}}"
+    insertbefore: "sendfile on;"
+    block: "upstream app_nodejs_design {
+      server 127.0.0.1:3002;
+      }"
+
+ 
+- name: Replacing the site-enable config
+  template:
+    force: yes
+    src: "templates/default.conf.j2"
+    dest: "{{nginx_sites_path}}"
+    mode: 0700
+
+- service: 
+    name: nginx
+    state: restarted

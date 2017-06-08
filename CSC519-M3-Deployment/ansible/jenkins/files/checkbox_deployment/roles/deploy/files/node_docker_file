@@ -1,0 +1,5 @@
+FROM mhart/alpine-node:6
+MAINTAINER Shaurya Garg "sgarg7@ncsu.edu"
+COPY checkbox.io/server-side/site /
+RUN cd / && npm install
+CMD cd / && node server.js

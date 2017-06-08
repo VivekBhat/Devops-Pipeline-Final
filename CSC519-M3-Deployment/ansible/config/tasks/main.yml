@@ -1,0 +1,8 @@
+---
+- name: Copying static analysis script to jenkins server
+  copy: 
+    src: files/{{item}}
+    dest: "{{jenkins_path}}/{{item}}"
+  with_items:
+    - package.json
+    - analysis.js

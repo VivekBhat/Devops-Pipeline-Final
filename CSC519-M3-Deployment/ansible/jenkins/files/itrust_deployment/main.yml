@@ -1,0 +1,10 @@
+---
+- name: Deploying iTrust
+  hosts: iTrust
+  become: yes
+  
+  roles:
+    - install-docker
+    - jdk
+    - mysql
+    - deploy

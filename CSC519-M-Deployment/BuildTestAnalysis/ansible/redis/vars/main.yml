@@ -1,0 +1,5 @@
+---
+# vars file for redis
+redis_port: 6379
+databases: 1
+syslog_enabled: "yes"

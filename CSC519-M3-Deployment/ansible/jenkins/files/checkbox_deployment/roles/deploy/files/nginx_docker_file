@@ -1,0 +1,5 @@
+FROM nginx
+MAINTAINER Shaurya Garg "sgarg7@ncsu.edu"
+COPY checkbox.io/public_html /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY sites-enabled.conf /etc/nginx/sites-enabled/default

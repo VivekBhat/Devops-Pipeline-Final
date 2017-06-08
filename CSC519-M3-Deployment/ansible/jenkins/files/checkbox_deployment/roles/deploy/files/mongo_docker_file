@@ -1,0 +1,3 @@
+FROM mongo:3.4.3
+MAINTAINER Shaurya Garg "sgarg7@ncsu.edu"
+COPY checkbox.io/public_html /usr/share/nginx/html

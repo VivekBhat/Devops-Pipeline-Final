@@ -1,0 +1,9 @@
+---
+- name: Deploying checkbox.io
+  hosts: checkbox
+  become: yes
+  
+  roles:
+    - install-docker
+    - node
+    - deploy

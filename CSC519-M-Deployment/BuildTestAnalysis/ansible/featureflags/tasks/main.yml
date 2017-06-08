@@ -1,0 +1,12 @@
+---
+# tasks file for featureflags
+- name: Cloning feature flag repository
+  git: repo=https://github.com/vivekbhat/FeatureFlags.git dest=/src/FeatureFlags/
+  sudo: yes   
+
+- name: npm install
+  npm: path=/src/FeatureFlags/
+  sudo: yes
+
+- name: start the proxy ProxyServer
+  command: forever start /src/FeatureFlags/main.js

@@ -1,0 +1,20 @@
+commit 8a5156d735baf24e4f2186ebccd6dc8662936300
+tree bc197fe32967a69911faad9e7d49b24d1cba98b0
+parent 97215c0dbf58063db4dfb358f7cf22754d9b2e81
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:34:28 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:34:28 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 36
+
+
+
+:100644 100644 4dd3615281f5bb7310eca49c026bfa66ab4fbe33 d1edcb66c7f2b6d1c1fff25e1a6295d55f34fbd7 M	iTrust/src/main/edu/ncsu/csc/itrust/DBUtil.java
+:100644 100644 a222f6902639b94ee57627c2a67759c0430c7a9e c739a1ab8214f34928f1740824b565cb29d172cc M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddApptAction.java
+:100644 100644 4c2bceec13e97b4a28ca19533d988b169834db6b e98b363e0ce6356bf0edc03a487cfc295a7fef49 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ManageHospitalAssignmentsAction.java
+:100644 100644 c04c07f870b7e58b0802c19265b0356553571732 01cf10ba2ac174be03986a0de133b902a88c3d72 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ResetPasswordAction.java
+:100644 100644 b2acd9ddaaac8118da3d5c984920b09c38b57d3f 50fd60d2306835e3cbfa8fb8461b60e5d90356be M	iTrust/src/main/edu/ncsu/csc/itrust/action/SendMessageAction.java
+:100644 100644 697b590fd78d47fb710f42711a0a7343204a6c34 1b8f25a4d6ddcf74d96ae4cd09dd69ca6c5b2c32 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyRecordsAction.java
+:100644 100644 19831ae53f5498e04bb0523396f39538a987bc74 e24120cae11b6ab71029a72befb41336ac5288f8 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/EditEntryAction.java
+:100644 100644 73f1c10690c5ed389bff8bbe1cf2992b13ace45c 6107d7502883e50ad8de47027d019f758f6c191e M	iTrust/src/main/edu/ncsu/csc/itrust/controller/NavigationController.java
+:100644 100644 24e1905bcce5caeaa7d5efa2ba899dd9738538c8 295ea4039bfe9d53f892ab782d6c95be557e4805 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/medicalProcedure/MedicalProcedureController.java
+:100644 100644 44a5f00ad0fa7824fb4aa3e8305d6c8421bcd4e9 e380ebfb9d4551a43f3899fc01f6c73560e5b7b3 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/prescription/PrescriptionController.java

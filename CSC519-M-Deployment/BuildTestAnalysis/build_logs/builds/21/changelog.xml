@@ -1,0 +1,21 @@
+commit b7db3bf96123dab12db1cc6a523663eb16e38a0c
+tree 690ec94aba50e00e17520fe0fd600c1f0568d4e2
+parent 8a2c8a96696124a58cce47ab9601efc680e050c7
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:31:47 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:31:47 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 20
+
+
+
+:100644 100644 690ec418644f2f16b50d51e1560712ab3577d330 e93f21d74c4d9bab9c150e63037d8e1f6d8d4752 M	iTrust/src/main/edu/ncsu/csc/itrust/BeanBuilder.java
+:100644 100644 99f7e53b3aef173a6d1d26f6971f6d7372ea4a4e 465c913798ebe0c2088bf809109e30f4bd16eb6b M	iTrust/src/main/edu/ncsu/csc/itrust/DateUtil.java
+:100644 100644 ae54a82aa2445f82461f59cb8047103628ab2820 29799eff18f13507fd8f849bc8546cce0485255f M	iTrust/src/main/edu/ncsu/csc/itrust/XmlGenerator.java
+:100644 100644 7aaceaba39428ff7520d7394a41d52671a22cb1e a87a51ab938aa8e963b9ab49306e346df9ff2b57 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ChangeSessionTimeoutAction.java
+:100644 100644 7d2beee029089a90787957f8126f41d54f21dbee 3b1988630319be7dc1a6c7ea170610e44e6a1f35 M	iTrust/src/main/edu/ncsu/csc/itrust/action/EventLoggingAction.java
+:100644 100644 769368aa5fdbcf524379d51e28c6a025353f8b9d 0744a8c187b281ef77dd41ead10b0c54a0a97e2e M	iTrust/src/main/edu/ncsu/csc/itrust/action/GroupReportGeneratorAction.java
+:100644 100644 b0969c9036b8914916db061bfff59c2cc3100416 c1e6d93ac49e12963bbf9e372dcce3ef1c98c42d M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyApptsAction.java
+:100644 100644 bac13188480aefe6d575b970821517d304915691 2f66328681856e08c067a7a7a7008c0ed9a3634b M	iTrust/src/main/edu/ncsu/csc/itrust/action/ZipCodeAction.java
+:100644 100644 156eb0a09d28a926daef100b887cfe91b4fa9ebe 5f6b208ca4744490f334217bfc81bd4c0c764675 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/ViewEntryAction.java
+:100644 100644 37ed0abddc6cac748c8fb19351fc3a24e64aefbd 662e429f8fd384fc42382276951901e50c562674 M	iTrust/src/main/edu/ncsu/csc/itrust/parser/LOINCCodeParser.java
+:100644 100644 ee59b780b00c02f755e7f89491572962207a2d35 0437caca36a99be26e73443ed2c2875fc7d6f6c3 M	iTrust/src/main/edu/ncsu/csc/itrust/server/GroupReportGeneratorServlet.java

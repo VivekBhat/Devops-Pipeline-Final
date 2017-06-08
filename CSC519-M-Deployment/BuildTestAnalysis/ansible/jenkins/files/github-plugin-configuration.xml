@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<github-plugin-configuration plugin="github@1.26.1">
+  <configs>
+    <github-server-config>
+      <apiUrl>https://github.ncsu.edu/api/v3</apiUrl>
+      <manageHooks>true</manageHooks>
+      <credentialsId>github_server</credentialsId>
+      <clientCacheSize>20</clientCacheSize>
+    </github-server-config>
+  </configs>
+  <hookSecretConfig>
+    <credentialsId></credentialsId>
+  </hookSecretConfig>
+</github-plugin-configuration>

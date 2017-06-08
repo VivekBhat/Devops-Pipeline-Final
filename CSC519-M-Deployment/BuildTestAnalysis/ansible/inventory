@@ -1,0 +1,2 @@
+[jenkins]
+jenkins ansible_ssh_host=67.205.177.104 ansible_ssh_user=root ansible_ssh_port=22

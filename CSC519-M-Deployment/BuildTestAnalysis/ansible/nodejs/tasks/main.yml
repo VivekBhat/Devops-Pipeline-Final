@@ -1,0 +1,21 @@
+---
+# tasks file for nodejs
+- name: Update apt cache
+  sudo: yes
+  apt: update_cache=true cache_valid_time=3600
+
+- name: Install nodejs webserver
+  sudo: yes
+  apt: pkg=nodejs state=installed update_cache=true
+
+- name: Install npm 
+  sudo: yes
+  apt: pkg=npm state=installed update_cache=true
+
+- name: Install forever
+  sudo: yes 
+  command: npm install forever -g
+
+- name: Link nodejs to node
+  sudo: yes
+  command: ln -s /usr/bin/nodejs /usr/bin/node

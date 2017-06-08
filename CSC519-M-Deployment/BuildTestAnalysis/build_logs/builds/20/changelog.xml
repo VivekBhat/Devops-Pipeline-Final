@@ -1,0 +1,17 @@
+commit 8a2c8a96696124a58cce47ab9601efc680e050c7
+tree 2a4d4be4a7116a9e7ce9e2975c12a41f75ee4ddc
+parent 7aaecf21736a765c506e8487d61135a7b9db6291
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:31:38 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:31:38 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 19
+
+
+
+:100644 100644 e93f21d74c4d9bab9c150e63037d8e1f6d8d4752 690ec418644f2f16b50d51e1560712ab3577d330 M	iTrust/src/main/edu/ncsu/csc/itrust/BeanBuilder.java
+:100644 100644 46979c35afe135d1c060772ea8675ce01399dec9 50f1df294478f42ba0d20b85021e039322424196 M	iTrust/src/main/edu/ncsu/csc/itrust/Localization.java
+:100644 100644 3b1988630319be7dc1a6c7ea170610e44e6a1f35 7d2beee029089a90787957f8126f41d54f21dbee M	iTrust/src/main/edu/ncsu/csc/itrust/action/EventLoggingAction.java
+:100644 100644 2f66328681856e08c067a7a7a7008c0ed9a3634b bac13188480aefe6d575b970821517d304915691 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ZipCodeAction.java
+:100644 100644 5f6b208ca4744490f334217bfc81bd4c0c764675 156eb0a09d28a926daef100b887cfe91b4fa9ebe M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/ViewEntryAction.java
+:100644 100644 662e429f8fd384fc42382276951901e50c562674 37ed0abddc6cac748c8fb19351fc3a24e64aefbd M	iTrust/src/main/edu/ncsu/csc/itrust/parser/LOINCCodeParser.java
+:100644 100644 0437caca36a99be26e73443ed2c2875fc7d6f6c3 ee59b780b00c02f755e7f89491572962207a2d35 M	iTrust/src/main/edu/ncsu/csc/itrust/server/GroupReportGeneratorServlet.java

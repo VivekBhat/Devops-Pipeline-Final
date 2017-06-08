@@ -1,0 +1,13 @@
+---
+dependencies:
+  - git
+  - unzip
+  - curl
+  - apt-transport-https
+  - ca-certificates
+  - software-properties-common
+  - python-pip
+  - redis-tools
+  
+apt_key: https://apt.dockerproject.org/gpg
+apt_repo: deb https://apt.dockerproject.org/repo ubuntu-trusty main

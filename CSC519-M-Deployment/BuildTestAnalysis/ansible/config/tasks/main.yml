@@ -1,0 +1,18 @@
+---
+- name: Copying static analysis script to jenkins server
+  copy: 
+    src: files/{{item}}
+    dest: "{{jenkins_path}}/{{item}}"
+  with_items:
+    - package.json
+    - analysis.js
+
+- name: Cloning Useless Test Detector
+  git:
+    repo: "https://{{ansible_user}}:{{GIT_TOKEN}}@github.ncsu.edu/smirhos/CSC519-M-BuildTestAnalysis.git"
+    dest: "{{jenkins_path}}/BuildTools"
+
+- name: Compile Useless Test Detector
+  args:
+    chdir: "{{jenkins_path}}/BuildTools/UselessTest"
+  shell: mvn compile

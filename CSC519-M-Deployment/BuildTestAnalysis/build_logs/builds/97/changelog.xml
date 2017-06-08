@@ -1,0 +1,21 @@
+commit d9797129f3259adc7126dbd57d9fa80735ca0ed2
+tree a57aa865145710d4bb3f50226625765fa393f6c0
+parent 77f964bd5cfe0dd433e365c9edc7123cfd30b5b5
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:44:09 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:44:09 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 96
+
+
+
+:100644 100644 908adb5027da8c743b15252307cbc85dd2ab7689 71c526b609e924a1d532da9745044e77fe2baca3 M	iTrust/src/main/edu/ncsu/csc/itrust/HtmlEncoder.java
+:100644 100644 29799eff18f13507fd8f849bc8546cce0485255f ae54a82aa2445f82461f59cb8047103628ab2820 M	iTrust/src/main/edu/ncsu/csc/itrust/XmlGenerator.java
+:100644 100644 4ed3d85e561cdd4d1d88346cbcb9b2fb56d464e0 bd9a5adf03e15f7138fc86b0e1c1a076b473ac4b M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddRemoteMonitoringDataAction.java
+:100644 100644 90e6a9aa645093c14eb7c8be3ef9415482e0d454 502104cfccf2af90eac4f90fd2fe5c935bd8c77b M	iTrust/src/main/edu/ncsu/csc/itrust/action/EditApptTypeAction.java
+:100644 100644 06a49c989f139b2778382c3d86425b533274cc57 8f49bfa046d060c0364b5cc63506a125f0b71218 M	iTrust/src/main/edu/ncsu/csc/itrust/action/LoginFailureAction.java
+:100644 100644 e170fe7e2be09c37f7828cd1bf0a407332a5319f a370d9f7e1003aca0f290ecc0e8bbb5c58fb914d M	iTrust/src/main/edu/ncsu/csc/itrust/action/ReviewsAction.java
+:100644 100644 4e467a460fc161093fe3ffb5b36dc0d318b8584e a32f36a9a4edeb4ebe82aa7c010f7cc641030531 M	iTrust/src/main/edu/ncsu/csc/itrust/action/UpdateNDCodeListAction.java
+:100644 100644 d45f6805253559c6f9d8e559fa7fda3c99bfe1f9 f97098cc3abe06ec86eb40ed42ea52008d6b2722 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyReportRequestsAction.java
+:100644 100644 dbd1c23010c8cfa70d8af97388d50a965ec8f89e b969fd697335df937ed6e27c400a44bf77c6380c M	iTrust/src/main/edu/ncsu/csc/itrust/report/DemographicReportFilter.java
+:100644 100644 c08aef2c72fc08612f9c8a1a01de34016fcf79ed c81cf08f0d496e224fa68f51409ef6be5ad3b1ea M	iTrust/src/main/edu/ncsu/csc/itrust/report/ReportFilter.java
+:100644 100644 5a2637650936137f2a725fb29e032c429c8a3393 145a8f7756880d831a5048f53410e843cd1011e7 M	iTrust/src/main/edu/ncsu/csc/itrust/webutils/LocalDateTimeConverter.java

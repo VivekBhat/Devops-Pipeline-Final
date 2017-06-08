@@ -1,0 +1,9 @@
+---
+- name: CM for iTrust
+  hosts: itrust
+  become: yes
+  roles:
+    - git
+    - install-docker
+    - jdk
+    - mysql

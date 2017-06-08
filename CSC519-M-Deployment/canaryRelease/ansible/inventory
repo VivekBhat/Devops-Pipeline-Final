@@ -1,0 +1,8 @@
+[CanaryServer]
+CanaryServer ansible_ssh_host=67.205.177.230 ansible_ssh_user=root
+[AppServer]
+AppServer ansible_ssh_host=67.205.177.234 ansible_ssh_user=root
+[RedisServer]
+RedisServer ansible_ssh_host=67.205.185.24 ansible_ssh_user=root
+[ProxyServer]
+ProxyServer ansible_ssh_host=67.205.177.235 ansible_ssh_user=root

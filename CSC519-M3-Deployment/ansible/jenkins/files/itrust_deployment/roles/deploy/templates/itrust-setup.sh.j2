@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This line will make the script to wait until 
+# MySQL service is started completely
+while ! nc -z {{db_server_url}} 3306
+do
+  sleep 1
+  echo "Waiting for mysql service to be started"
+done
+
+# start server
+catalina.sh run

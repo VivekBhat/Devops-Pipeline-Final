@@ -1,0 +1,20 @@
+commit 4fc1c4b853a3bdcbe71f97adb2947cc18d17095e
+tree 1ebf0f69cdcbe96e71ceafe72fafb526782b86b3
+parent 178de4114de3f21b02aa9fa0e4f2581ced1281a1
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:34:49 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:34:49 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 38
+
+
+
+:100644 100644 836e61f265c2439642fb1e6f0cf4bfc8701ae6b3 04b0233c34ecdd4843789ce6ba8939932ccc6dd3 M	iTrust/src/main/edu/ncsu/csc/itrust/EmailUtil.java
+:100644 100644 769368aa5fdbcf524379d51e28c6a025353f8b9d 2153592fcaddda0f1003e1471e92fd93771189c8 M	iTrust/src/main/edu/ncsu/csc/itrust/action/GroupReportGeneratorAction.java
+:100644 100644 24331a35cb43e3d0f26f7186be0118bf34486004 70f21a4fe49c464b4e5c2e5c366bb7772d7c1647 M	iTrust/src/main/edu/ncsu/csc/itrust/action/SetSecurityQuestionAction.java
+:100644 100644 2e756c39c0ab0875eaab8bb16d935cce66808e5c 1158364febd7bf7ca071a8fa1f8f838c5ef25465 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewReportAction.java
+:100644 100644 156eb0a09d28a926daef100b887cfe91b4fa9ebe 5f6b208ca4744490f334217bfc81bd4c0c764675 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/ViewEntryAction.java
+:100644 100644 84e00a5d1b27adb159cbb6452b7a4038931d2b0d e88c8f1dd9aeca3e8d48bb8dd16d0ce4471603bb M	iTrust/src/main/edu/ncsu/csc/itrust/controller/immunization/ImmunizationForm.java
+:100644 100644 e600d3ee1a5ca59cde7a9fd8647a567de4b8dd71 06e7983e95a351f388a95cb9036001c8b969a3a3 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/loinccode/LoincCodeForm.java
+:100644 100644 cdbff48f8e480f29b02a32bdb085f876f2060352 d8ac2b69504a5d7a8d43620e090d850cb41a84cc M	iTrust/src/main/edu/ncsu/csc/itrust/exception/FormValidationException.java
+:100644 100644 c81cf08f0d496e224fa68f51409ef6be5ad3b1ea c08aef2c72fc08612f9c8a1a01de34016fcf79ed M	iTrust/src/main/edu/ncsu/csc/itrust/report/ReportFilter.java
+:100644 100644 76f45482bcf8c2703adf72f46647d23f5028a9d6 ec788b00fddae528acf97104b5a6f9d36e392039 M	iTrust/src/main/edu/ncsu/csc/itrust/server/SessionTimeoutListener.java

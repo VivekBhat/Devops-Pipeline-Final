@@ -1,0 +1,17 @@
+commit a16d9592f1e5cb0db5daf4f40777045b16f6466f
+tree 5877868862c5cc76bd74934759cfd3e97e166204
+parent e188560af610eb749ada681fbc06587cc4e9b4ff
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:37:56 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:37:56 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 57
+
+
+
+:100644 100644 e00cfdcde6ba0f5d1ce35848fced6de5782bb5ab 908adb5027da8c743b15252307cbc85dd2ab7689 M	iTrust/src/main/edu/ncsu/csc/itrust/HtmlEncoder.java
+:100644 100644 28aa02f56bcef7357d324965b0a52f39b5d0cb1d ac45c133736bdd4570e809a7d7042c78c3e43fc6 M	iTrust/src/main/edu/ncsu/csc/itrust/RandomPassword.java
+:100644 100644 106486007945ceebaf1e9c25e741b543b742941c ee613b311be98f401347cbdf0d1b8d5ec25c77b1 M	iTrust/src/main/edu/ncsu/csc/itrust/action/GroupReportAction.java
+:100644 100644 1936c29ad0dbd5171d6d338fe86e6ae841ff13d2 5e8d478294f56040be617e05e85653afed789818 M	iTrust/src/main/edu/ncsu/csc/itrust/action/RequestRecordsReleaseAction.java
+:100644 100644 6a8ca5c9b21fa319ebe7d28ebadd9ac76ac4106d d47429876711e5dcc22275234053723917b9b6b4 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewHelperAction.java
+:100644 100644 7529276ac5d476a4eaa9041e71e2e9cd213e2b85 255df87d4578501b3747891a204c144cdde83aa7 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/icdcode/ICDCodeController.java
+:100644 100644 139460803edc0ddab66b741db1a5be6ee28529f0 2afb3c958e591ce430f1a4786891b6a22cd17f18 M	iTrust/src/main/edu/ncsu/csc/itrust/server/PatientSearchServlet.java

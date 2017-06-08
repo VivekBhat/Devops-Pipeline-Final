@@ -1,0 +1,6 @@
+echo "##########################"
+echo "going into ansible folder"
+echo "##########################"
+cd ansible/
+echo "Spinning up 2 new servers for "
+node do_create.js

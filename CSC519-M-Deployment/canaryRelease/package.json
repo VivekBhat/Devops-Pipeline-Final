@@ -1,0 +1,22 @@
+{
+  "name": "deploy",
+  "version": "1.0.0",
+  "description": "milestone 3",
+  "main": "do_create.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.ncsu.edu/smirhos/CSC519-M-Deployment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+        "needle": "latest",
+        "os": "latest",
+        "sleep": "latest",
+        "fs": "latest"
+    }
+}
+

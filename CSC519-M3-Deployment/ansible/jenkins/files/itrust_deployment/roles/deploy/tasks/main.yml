@@ -1,0 +1,83 @@
+---
+# - name: Getting git cred
+#   command: cat "/home/{{lookup('env', 'USER')}}/itrust_deployment/token"
+#   # become_user: {{ansible_user}}
+#   delegate_to: 127.0.0.1
+#   register: git_token
+
+# - name: debug 
+#   debug:
+#     var: git_token.stdout
+
+- name: Cloning iTrust
+  become: yes
+  git:
+    repo: "https://{{git_id}}:{{git_token}}@github.ncsu.edu/smirhos/iTrust-v23.git"
+    dest: "{{home_path}}/iTrust"
+    update: yes
+    version: production
+  tags:
+    - rolling-update
+
+- name: Copying Dockerfile template
+  template:
+    src: "templates/Dockerfile.j2"
+    dest: "{{home_path}}/Dockerfile"
+    mode: 0707
+
+- name: Copying itrust-setup script template
+  template:
+    src: "templates/itrust-setup.sh.j2"
+    dest: "{{home_path}}/itrust-setup.sh"
+    mode: 0777
+
+- name: Exporting the war file
+  become: yes
+  command: "mvn package -DskipTests"
+  args:
+    chdir: "/home/{{ansible_user}}/iTrust/iTrust"
+  tags:
+    - rolling-update
+
+- name: Copying the war file for building tomcat docker image
+  become: yes
+  copy:
+    src: "{{iTrust_war_path}}"
+    dest: "{{home_path}}/iTrust.war"
+    mode: 777
+    remote_src: True
+  tags:
+    - rolling-update
+
+- name: Build Docker image
+  become: yes
+  command: "docker build -t itrust-docker/tomcat {{home_path}}"
+  tags:
+    - rolling-update
+
+# In case docker swarm is already initialized (i.e. when already deployed), there will be stderr, but we're ignoring since we know what it means!
+# Alternatively it's possible to use: 'failed_when: false' and it will always show as passing, but downside is we won't know if something else fails
+- name: Swarm init
+  become: yes
+  command: "docker swarm init --advertise-addr {{ansible_ssh_host}}"
+  tags:
+    - first-run
+  ignore_errors: yes
+
+# In case docker swarm is already initialized (i.e. when already deployed), there will be stderr, but we're ignoring since we know what it means!
+# Alternatively it's possible to use: 'failed_when: false' and it will always show as passing, but downside is we won't know if something else fails
+- name: Run itrust in docker swarm mode, 5 replicas, load balancing, ...
+  become: yes
+  command: "docker service create --replicas 5 --name itrust -p 80:8080 --update-delay 60s --update-parallelism 1 itrust-docker/tomcat"
+  tags:
+    - first-run
+  ignore_errors: yes
+
+# =========================================
+# Rolling updates
+# =========================================
+- name: Rolling Update
+  become: yes
+  command: "docker service update --image itrust-docker/tomcat:latest itrust --force"
+  tags:
+    - rolling-update

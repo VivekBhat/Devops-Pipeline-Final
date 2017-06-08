@@ -1,0 +1,25 @@
+FROM tomcat:9.0.0-jre8
+MAINTAINER Samim Mirhosseini, smirhos@ncsu.edu
+
+# Update and install mysql client and other needed packages
+RUN apt-get -y update
+RUN apt-get install -y unzip wget mysql-client netcat
+
+# Downloading MySQL JDBC Driver
+RUN wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.40.zip && unzip mysql-connector-java-5.1.40.zip && cp mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /usr/local/tomcat/lib/ && rm -rf mysql-connector-java-5.1.40.zip mysql-connector-java-5.1.40
+
+# Installing mysql client -- doesn't work
+RUN apt-get -y install lsb-release
+
+# Copying the war file and shell script for setting up iTrust
+COPY iTrust.war /usr/local/tomcat/webapps
+COPY itrust-setup.sh /usr/local/tomcat
+
+# Extracting the exported war file
+RUN mkdir /usr/local/tomcat/webapps/iTrust && unzip /usr/local/tomcat/webapps/iTrust.war -d webapps/iTrust
+
+RUN sed -i -e "s/localhost/{{db_server_url}}/g" webapps/iTrust/META-INF/context.xml
+
+# Setting this shell script to be ran when a container is created:
+# The reason is that these tasks need the servers be running at the time of execution
+CMD sh /usr/local/tomcat/itrust-setup.sh

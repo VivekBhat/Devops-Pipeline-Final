@@ -1,0 +1,48 @@
+---
+# - name: Configuration Management Jenkins
+#   hosts: jenkins
+#   become: yes
+#   vars:
+#     jenkins_path: /var/lib/jenkins
+#   roles:
+    # - git
+    # - node
+    # - mysql
+    # - jenkins_it
+    # - config 
+    # - ansible-role-ansible
+
+- name: CM for checkbox.io
+  hosts: checkboxio
+  become: yes
+  roles:
+    - ansible-role-git  
+    - node
+    - mongodb
+    - nginx
+    - redisconf
+    - deploy_checkboxio
+
+# - name: CM for iTrust
+#   hosts: itrust
+#   become: yes
+#   roles:
+#     - git
+#     - install-docker
+#     - jdk
+#     - mysql
+
+- hosts: RedisServer
+  roles:
+      - ansible-role-git
+      - redis
+      - nodejs
+      - redisconf
+      - featureflags
+
+- hosts: ProxyServer
+  roles:
+      - ansible-role-git
+      - nodejs
+      - redisconf
+      - proxy

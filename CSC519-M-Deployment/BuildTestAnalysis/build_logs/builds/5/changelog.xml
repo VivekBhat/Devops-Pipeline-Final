@@ -1,0 +1,20 @@
+commit 7ba93d6d5b8ac5341f78895c95f59da827e9514c
+tree cf26c65c6a17fe21c1789e1304f335687988ad09
+parent 3c10a9ca488f8ddf0efc51ec17ec6bbddcb6233e
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:29:09 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:29:09 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 4
+
+
+
+:100644 100644 a0e6ee75d87cf4e5c07f257517a7192fbcafaf59 8aa175be8f283d223cefce9789aeb451ebaf8dba M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddPHAAction.java
+:100644 100644 424e761e994e89f5c193579f163e6a7995322095 7aaceaba39428ff7520d7394a41d52671a22cb1e M	iTrust/src/main/edu/ncsu/csc/itrust/action/ChangeSessionTimeoutAction.java
+:100644 100644 8c86ef139fd775ed6d416ff663d7b7eaff573804 b2762b0a95b983f6d4cf77e43fdc3f295346138f M	iTrust/src/main/edu/ncsu/csc/itrust/action/UpdateReasonCodeListAction.java
+:100644 100644 3df5dab6d031822f05426ab65181e817e4bb315f 6134ffdea6f3c795052938d031f52f3878ad3b40 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/AddEntryAction.java
+:100644 100644 7e3a5e8a90fb7817ab7a83cf3d3db4c5e0ff091a 858be8dd03e4b40fec0e6bb91eab8f9cf926b41c M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/DeleteEntryAction.java
+:100644 100644 26ea678b6d66f0c430d564c4ac27d9f07d646b20 a5864f355815c4ec5563ef231794496b7ebbc97e M	iTrust/src/main/edu/ncsu/csc/itrust/controller/apptType/ApptTypeController.java
+:100644 100644 88d780df5453c09062db4f547d3deadd423f4ece c942a02028b32d11e701f042cc5c5b50eceda327 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/diagnosis/DiagnosisForm.java
+:100644 100644 e88c8f1dd9aeca3e8d48bb8dd16d0ce4471603bb 436095dded1b1bb336174ff4daccafbe03add44f M	iTrust/src/main/edu/ncsu/csc/itrust/controller/immunization/ImmunizationForm.java
+:100644 100644 e380ebfb9d4551a43f3899fc01f6c73560e5b7b3 b6bb2e0a8a4655d9f769d1d520eed4062bc079c5 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/prescription/PrescriptionController.java
+:100644 100644 37ed0abddc6cac748c8fb19351fc3a24e64aefbd 662e429f8fd384fc42382276951901e50c562674 M	iTrust/src/main/edu/ncsu/csc/itrust/parser/LOINCCodeParser.java

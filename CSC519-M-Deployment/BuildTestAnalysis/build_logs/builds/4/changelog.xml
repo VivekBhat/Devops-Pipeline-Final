@@ -1,0 +1,20 @@
+commit 3c10a9ca488f8ddf0efc51ec17ec6bbddcb6233e
+tree dfc99142dce9bfd87a2abf160c3c78acd03e1c9b
+parent 1630171cee03483a40c5d1572ce0355184dffe7b
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:28:58 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:28:58 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 3
+
+
+
+:100644 100644 8cb25bb78a9cd1b1feae2a130177d95fed474f49 c75fb999c94d19e9fede396c9083a1a82c21f3a1 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ActivityFeedAction.java
+:100644 100644 560a0828667df4da1baaff28c31eaba1ed10d5aa bffe9fd8b7679401c28fe468734b00a9849bb52a M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddLTAction.java
+:100644 100644 7aaceaba39428ff7520d7394a41d52671a22cb1e 424e761e994e89f5c193579f163e6a7995322095 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ChangeSessionTimeoutAction.java
+:100644 100644 1f1e2ba9d0ef994af1e68fa3205d82bd89b26359 728c4c041b6e941a3dd5daa39c9ed343932cfa8a M	iTrust/src/main/edu/ncsu/csc/itrust/action/EditPatientAction.java
+:100644 100644 858be8dd03e4b40fec0e6bb91eab8f9cf926b41c 7e3a5e8a90fb7817ab7a83cf3d3db4c5e0ff091a M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/DeleteEntryAction.java
+:100644 100644 a5864f355815c4ec5563ef231794496b7ebbc97e 26ea678b6d66f0c430d564c4ac27d9f07d646b20 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/apptType/ApptTypeController.java
+:100644 100644 c942a02028b32d11e701f042cc5c5b50eceda327 88d780df5453c09062db4f547d3deadd423f4ece M	iTrust/src/main/edu/ncsu/csc/itrust/controller/diagnosis/DiagnosisForm.java
+:100644 100644 826d466a21ab0f20c8589def107cc5c08ce0de83 e63bb7abb9a32a54c9d6fd12838340789add9507 M	iTrust/src/main/edu/ncsu/csc/itrust/logger/TransactionLogger.java
+:100644 100644 662e429f8fd384fc42382276951901e50c562674 37ed0abddc6cac748c8fb19351fc3a24e64aefbd M	iTrust/src/main/edu/ncsu/csc/itrust/parser/LOINCCodeParser.java
+:100644 100644 a306c307bbec8d91a430335f3449495fbb974242 694e58dd734275fff9a132958a85807b2d899d42 M	iTrust/src/main/edu/ncsu/csc/itrust/report/PersonnelReportFilter.java

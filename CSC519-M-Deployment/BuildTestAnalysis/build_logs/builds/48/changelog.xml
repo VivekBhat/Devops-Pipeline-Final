@@ -1,0 +1,19 @@
+commit c6f3238ffb87cc3f2f3329aee0be2a1dd9f4f149
+tree 5f7904a18d9553e7c4b1c9019936895b06c78035
+parent 2081e629250f5b99ca349b1ab907bfd93fbc7eaa
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:36:18 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:36:18 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 47
+
+
+
+:100644 100644 908adb5027da8c743b15252307cbc85dd2ab7689 42b46196b0d1dc05691e0f895f7036e9bdd94e9c M	iTrust/src/main/edu/ncsu/csc/itrust/HtmlEncoder.java
+:100644 100644 560a0828667df4da1baaff28c31eaba1ed10d5aa bffe9fd8b7679401c28fe468734b00a9849bb52a M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddLTAction.java
+:100644 100644 636a709d3ef743c4461e2318fdac4532f59d4215 df65c160cc485c6afa9e734dd7d8a3ad786b478d M	iTrust/src/main/edu/ncsu/csc/itrust/action/GetUserNameAction.java
+:100644 100644 ad7f7cb355525a6a4d5c5900f9df79e6deb827f2 01cf10ba2ac174be03986a0de133b902a88c3d72 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ResetPasswordAction.java
+:100644 100644 b2acd9ddaaac8118da3d5c984920b09c38b57d3f ba45c2f7d367f98db4e7164e9b1044cbcda2adf0 M	iTrust/src/main/edu/ncsu/csc/itrust/action/SendMessageAction.java
+:100644 100644 bc361b75a7017fcc9523030455bb6cec33cd9287 1158364febd7bf7ca071a8fa1f8f838c5ef25465 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewReportAction.java
+:100644 100644 6107d7502883e50ad8de47027d019f758f6c191e ffa06d5d2339482abf7df01f926a87c13467c5b2 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/NavigationController.java
+:100644 100644 3c483e3cf0d24c51bde8e4aab663b3d5ba63fcdb e9de4991ab86a00c39056f9817b28f9f1d02bb6a M	iTrust/src/main/edu/ncsu/csc/itrust/controller/diagnosis/DiagnosisController.java
+:100644 100644 ec788b00fddae528acf97104b5a6f9d36e392039 76f45482bcf8c2703adf72f46647d23f5028a9d6 M	iTrust/src/main/edu/ncsu/csc/itrust/server/SessionTimeoutListener.java

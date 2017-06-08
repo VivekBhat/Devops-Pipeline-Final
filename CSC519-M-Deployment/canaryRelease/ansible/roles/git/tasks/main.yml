@@ -1,0 +1,4 @@
+---
+- name: Install git and update cache
+  sudo: yes
+  apt: pkg=git state=installed update_cache=true

@@ -1,0 +1,120 @@
+---
+- name: Cloning checkbox.io
+  become: yes
+  git:
+    repo: "https://{{git_id}}:{{git_token}}@github.ncsu.edu/smirhos/checkbox.io.git"
+    dest: "{{home_path_docker}}/checkbox.io"
+    version: "{{GIT_HASH}}"
+    update: yes
+
+- name: Copy DockerFiles And ConfigFiles
+  copy:
+    src: files/
+    dest: "{{home_path_docker}}/"
+    mode: 0644
+
+# - name: Install Python-Docker Package
+#   pip:
+#     name: docker
+- name: Check if Mongo network exists
+  shell: docker network ls
+  register: check_network
+  changed_when: false
+
+- name: Create a network
+  shell: docker network create mongo
+  when: "check_network.stdout.find('mongo') == -1"
+
+- name: Check if Mongo master is running
+  shell: docker ps -f name=mongo
+  register: mongo_master_run
+  changed_when: false
+
+- name: Check if Mongo master is dead
+  shell: docker ps -af name=mongo
+  register: mongo_master_dead
+  changed_when: false
+
+- name: Remove dead Mongo Master
+  shell: docker rm mongo
+  when : 
+    - "mongo_master_run.stdout.find('mongo') == -1"
+    - "mongo_master_dead.stdout.find('mongo') != -1"
+
+- name: Start Mongo Master
+  shell: docker run --name mongo -d mongo;docker network connect mongo mongo
+  when : 
+    - "mongo_master_run.stdout.find('mongo') == -1"
+
+
+- name: Check if Redis master is running
+  shell: docker ps -f name=redis
+  register: redis_master_run
+  changed_when: false
+
+- name: Check if Redis master is dead
+  shell: docker ps -af name=redis
+  register: redis_master_dead
+  changed_when: false
+
+- name: Remove dead Redis Master
+  shell: docker rm redis
+  when : 
+    - "redis_master_run.stdout.find('redis') == -1"
+    - "redis_master_dead.stdout.find('redis') != -1"
+
+- name: Start Redis Master
+  shell: docker run --name redis -p 6379:6379 -d redis:alpine;docker network connect mongo redis
+  when : 
+    - "redis_master_run.stdout.find('redis') == -1"
+
+- name: Start Stable Version
+  args:
+    chdir: "{{home_path_docker}}/"
+  shell: docker-compose -f DockerCompose.yml -p stable up -d
+  environment: {"WEB_PORT":"8080"}
+
+- name: Build Canary Version
+  args:
+    chdir: "{{home_path_docker}}/"
+  shell: docker-compose -f DockerCompose.yml -p canary build
+  environment: {"WEB_PORT":"8081"}
+
+- name: Start Canary Version
+  args:
+    chdir: "{{home_path_docker}}/"
+  shell: docker-compose -f DockerCompose.yml -p canary up -d
+  environment: {"WEB_PORT":"8081"}
+
+- name: NPM Install Load Balancer
+  become: yes
+  npm:
+    path: "{{home_path_docker}}/LoadBalancer/"
+
+- name: "Check if Load Balancer is running"
+  become: no
+  command: forever list
+  register: forever_list
+  changed_when: false
+ 
+- name: "Start Load Balancer"
+  become: no
+  shell: forever start loadBalancer.js
+  args:
+   chdir: "{{home_path_docker}}/LoadBalancer/"
+  when: "forever_list.stdout.find('loadBalancer.js') == -1"
+
+- name: NPM Install Load Balancer
+  become: yes
+  npm:
+    path: "{{home_path_docker}}/CanaryAlert/"
+
+- name: "Start Polling Agent"
+  become: no
+  shell: forever start pollingAgent.js
+  args:
+   chdir: "{{home_path_docker}}/CanaryAlert/"
+  when: "forever_list.stdout.find('pollingAgent.js') == -1"
+
+
+

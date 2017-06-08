@@ -1,0 +1,12 @@
+---
+# tasks file for proxy
+- name: Cloning Proxy Server Repository
+  git: repo=https://github.com/VivekBhat/ProxyServer.git dest=/src/ProxyServer/
+  sudo: yes   
+
+- name: npm install
+  npm: path=/src/ProxyServer/
+  sudo: yes
+
+- name: start the proxy ProxyServer
+  command: forever start /src/ProxyServer/proxy.js

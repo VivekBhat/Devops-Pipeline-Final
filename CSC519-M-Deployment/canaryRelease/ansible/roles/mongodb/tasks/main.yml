@@ -1,0 +1,27 @@
+---
+- name: Added mongodb key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: EA312927
+
+- name: Add mongodb repository
+  #become: yes
+  apt_repository:
+    repo: deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse
+    state: present
+
+- name: Install mongodb
+  #become: yes
+  apt:
+    pkg: mongodb-org
+    state: latest
+    update_cache: yes
+
+- name: Installing Python-Pip
+  apt:
+    pkg: python-pip
+    state: latest
+    
+- name: Install the latest pymongo package
+  pip: name=pymongo state=latest use_mirrors=no
+

@@ -1,0 +1,20 @@
+commit e188560af610eb749ada681fbc06587cc4e9b4ff
+tree a8c51f254262ccb5a1cbff812e1ca5685d7b6dcd
+parent 5eedf401c37886ae968e9d5f25f0d1236d871caf
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:37:47 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:37:47 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 56
+
+
+
+:100644 100644 908adb5027da8c743b15252307cbc85dd2ab7689 e00cfdcde6ba0f5d1ce35848fced6de5782bb5ab M	iTrust/src/main/edu/ncsu/csc/itrust/HtmlEncoder.java
+:100644 100644 ac45c133736bdd4570e809a7d7042c78c3e43fc6 28aa02f56bcef7357d324965b0a52f39b5d0cb1d M	iTrust/src/main/edu/ncsu/csc/itrust/RandomPassword.java
+:100644 100644 a1b53c357244b9467aa4df73cf0f61b1fb759481 bd9a5adf03e15f7138fc86b0e1c1a076b473ac4b M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddRemoteMonitoringDataAction.java
+:100644 100644 2e461d013e098aa3d1f275dae595992abe3c08c8 502104cfccf2af90eac4f90fd2fe5c935bd8c77b M	iTrust/src/main/edu/ncsu/csc/itrust/action/EditApptTypeAction.java
+:100644 100644 ee613b311be98f401347cbdf0d1b8d5ec25c77b1 106486007945ceebaf1e9c25e741b543b742941c M	iTrust/src/main/edu/ncsu/csc/itrust/action/GroupReportAction.java
+:100644 100644 1e1601be1d25895f5d3dadb0558f7d2c5eee3cae 1f14266246cdc11d4ec3939cf8a03006e3cd6567 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyRemoteMonitoringListAction.java
+:100644 100644 19831ae53f5498e04bb0523396f39538a987bc74 e24120cae11b6ab71029a72befb41336ac5288f8 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/EditEntryAction.java
+:100644 100644 c1bd5164d4585e6c357e2ab3435c6a426a809770 5b52c68bc3102ca53a80d78f9e68c46779a7a08a M	iTrust/src/main/edu/ncsu/csc/itrust/controller/labProcedure/LabProcedureController.java
+:100644 100644 f9ebc6d842a184a85a329008fc96bcc9acebf783 139460803edc0ddab66b741db1a5be6ee28529f0 M	iTrust/src/main/edu/ncsu/csc/itrust/server/PatientSearchServlet.java
+:100644 100644 043e17dc9ed7f2d4329616dd77de1c6ac445ed70 8573e633cf8a13ce5f8be10cde4e6802a38114c0 M	iTrust/src/main/edu/ncsu/csc/itrust/webutils/LocalDateConverter.java

@@ -1,0 +1,20 @@
+commit 3e6ea55774bbdcf31c0b0e65866d3cb92073c2fa
+tree cc720dd46e967ad67ec48045c009931280b21f0f
+parent 0efc543549871eab10ddb20335b7127de9a606ce
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:39:52 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:39:52 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 69
+
+
+
+:100644 100644 e6bd4ad74b80d8e1d7342caf699a9c5cb6088ba7 ae54a82aa2445f82461f59cb8047103628ab2820 M	iTrust/src/main/edu/ncsu/csc/itrust/XmlGenerator.java
+:100644 100644 e6eed91b82aa428501304146763379804d2b6756 c75fb999c94d19e9fede396c9083a1a82c21f3a1 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ActivityFeedAction.java
+:100644 100644 36940d2687c5715e607c5a1c8ee428e58f6cc539 82d6c553044c4cbae05fd151fe899ac0a9bc878f M	iTrust/src/main/edu/ncsu/csc/itrust/action/EditRepresentativesAction.java
+:100644 100644 decc1453c11e417bd8a86aaff913e919a7ca0280 d4dd1585ffea7503a5629bb65b02567348ef2e42 M	iTrust/src/main/edu/ncsu/csc/itrust/action/FindExpertAction.java
+:100644 100644 0cb726a1c8bb0ed9919d258b369bd1facf60299c 6968cd2beb4f2e1ac6d3d8fbd4ec05aa9fd10ce5 M	iTrust/src/main/edu/ncsu/csc/itrust/action/PatientRoomAssignmentAction.java
+:100644 100644 1936c29ad0dbd5171d6d338fe86e6ae841ff13d2 c1c42179ad262631c0c0f7babb708f9e60715777 M	iTrust/src/main/edu/ncsu/csc/itrust/action/RequestRecordsReleaseAction.java
+:100644 100644 01cf10ba2ac174be03986a0de133b902a88c3d72 753d4038712dfc88a5f9fac684edd4733da65cac M	iTrust/src/main/edu/ncsu/csc/itrust/action/ResetPasswordAction.java
+:100644 100644 e24120cae11b6ab71029a72befb41336ac5288f8 19831ae53f5498e04bb0523396f39538a987bc74 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/EditEntryAction.java
+:100644 100644 e63bb7abb9a32a54c9d6fd12838340789add9507 826d466a21ab0f20c8589def107cc5c08ce0de83 M	iTrust/src/main/edu/ncsu/csc/itrust/logger/TransactionLogger.java
+:100644 100644 d96afc087955e770f4b97310442ca71db2b850c0 547c1725a7ef65a39b104b13ccf9af77af8810e6 M	iTrust/src/main/edu/ncsu/csc/itrust/server/WardCRUDServlet.java

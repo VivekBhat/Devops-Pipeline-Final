@@ -1,0 +1,16 @@
+# tasks file for redis
+- name: Ensure Redis is present
+  apt: pkg=redis-server state=latest
+  sudo: true
+
+- name: Ensure Redis is started
+  service: name=redis-server state=started enabled=yes
+  sudo: true
+
+- name: Ensure Redis Configuration
+  template: src=../../redis.conf dest=/etc/redis/redis.conf owner=root group=root mode=0644
+  sudo: true
+
+- name: Server is restarted
+  service: name=redis-server state=restarted
+  sudo: true

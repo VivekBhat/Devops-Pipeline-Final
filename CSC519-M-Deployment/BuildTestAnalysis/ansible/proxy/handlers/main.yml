@@ -1,0 +1,15 @@
+---
+# handlers file for proxy
+
+- name: Install git and update cache
+  sudo: yes
+  apt: pkg=git state=installed update_cache=true
+
+- name: Clone the git repository for proxy
+  git: repo=https://github.com/vivekbhat/ProxyServer.git
+  sudo: yes
+
+- name: Run npm install
+  npm: path=/ProxyServer/
+
+

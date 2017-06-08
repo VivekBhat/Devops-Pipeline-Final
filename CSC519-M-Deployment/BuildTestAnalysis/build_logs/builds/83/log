@@ -1,0 +1,649 @@
+commit notification c502a370d8198f4f0a94c47e4a075a48a10db3e9
+Building in workspace /var/lib/jenkins/workspace/iTrust-Fuzzer
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.ncsu.edu/smirhos/iTrust-v23 # timeout=10
+Fetching upstream changes from https://github.ncsu.edu/smirhos/iTrust-v23
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.ncsu.edu/smirhos/iTrust-v23 +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse c502a370d8198f4f0a94c47e4a075a48a10db3e9^{commit} # timeout=10
+ > git branch -a -v --no-abbrev --contains c502a370d8198f4f0a94c47e4a075a48a10db3e9 # timeout=10
+Checking out Revision c502a370d8198f4f0a94c47e4a075a48a10db3e9 (origin/fuzzer)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c502a370d8198f4f0a94c47e4a075a48a10db3e9
+ > git rev-list f872defd3f62e12a6a97d870bebbb8de606a6a08 # timeout=10
+[iTrust-Fuzzer] $ /bin/sh -xe /tmp/hudson1018271554676228166.sh
++ git checkout HEAD
++ cd ./iTrust
++ mvn package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for iTrust:iTrust:war:23.0.0
+[WARNING] 'dependencies.dependency.systemPath' for org.cewolf:cewolf:jar should not point at files within the project directory, ${project.basedir}/WebRoot/WEB-INF/lib/cewolf-1.1.jar will be unresolvable by dependent projects @ line 408, column 18
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building iTrust 23.0.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for milyn:sac:jar:1.3 is missing, no dependency information available
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.8:prepare-agent (jacoco-initialize) @ iTrust ---
+[INFO] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.7.8/org.jacoco.agent-0.7.8-runtime.jar=destfile=/var/lib/jenkins/workspace/iTrust-Fuzzer/iTrust/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ iTrust ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ iTrust ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 306 source files to /var/lib/jenkins/workspace/iTrust-Fuzzer/iTrust/target/classes
+[INFO] /var/lib/jenkins/workspace/iTrust-Fuzzer/iTrust/src/main/edu/ncsu/csc/itrust/webutils/SessionUtils.java: /var/lib/jenkins/workspace/iTrust-Fuzzer/iTrust/src/main/edu/ncsu/csc/itrust/webutils/SessionUtils.java uses unchecked or unsafe operations.
+[INFO] /var/lib/jenkins/workspace/iTrust-Fuzzer/iTrust/src/main/edu/ncsu/csc/itrust/webutils/SessionUtils.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:testResources (default-testResources) @ iTrust ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ iTrust ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- exec-maven-plugin:1.4.0:java (BuildDB) @ iTrust ---
+[INFO] 
+[INFO] --- exec-maven-plugin:1.4.0:java (GenerateTestData) @ iTrust ---
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ iTrust ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ViewReportAction.<init>(ViewReportAction.java:26)
+	at edu.ncsu.csc.itrust.action.ViewReportAction.<init>(ViewReportAction.java:35)
+	at edu.ncsu.csc.itrust.unit.action.ViewReportActionTest.<init>(ViewReportActionTest.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at junit.framework.TestSuite.createTest(TestSuite.java:60)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:307)
+	at junit.framework.TestSuite.addTestsFromTestCase(TestSuite.java:150)
+	at junit.framework.TestSuite.<init>(TestSuite.java:129)
+	at org.junit.internal.runners.JUnit38ClassRunner.<init>(JUnit38ClassRunner.java:74)
+	at org.junit.internal.builders.JUnit3Builder.runnerForClass(JUnit3Builder.java:11)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runner.Computer.getRunner(Computer.java:40)
+	at org.junit.runner.Computer$1.runnerForClass(Computer.java:31)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:101)
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:87)
+	at org.junit.runners.Suite.<init>(Suite.java:81)
+	at org.junit.runner.Computer.getSuite(Computer.java:28)
+	at org.junit.runner.Request.classes(Request.java:75)
+	at org.junit.runner.Request.classes(Request.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.common.junit4.JUnit4Reflector.createRequest(JUnit4Reflector.java:67)
+	at org.apache.maven.surefire.common.junit4.JUnit4ProviderUtil.createSuiteDescription(JUnit4ProviderUtil.java:111)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.createTestsDescription(JUnit4Provider.java:328)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:166)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ViewReportAction.<init>(ViewReportAction.java:26)
+	at edu.ncsu.csc.itrust.action.ViewReportAction.<init>(ViewReportAction.java:35)
+	at edu.ncsu.csc.itrust.unit.action.ViewReportActionTest.<init>(ViewReportActionTest.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at junit.framework.TestSuite.createTest(TestSuite.java:60)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:307)
+	at junit.framework.TestSuite.addTestsFromTestCase(TestSuite.java:150)
+	at junit.framework.TestSuite.<init>(TestSuite.java:129)
+	at org.junit.internal.runners.JUnit38ClassRunner.<init>(JUnit38ClassRunner.java:74)
+	at org.junit.internal.builders.JUnit3Builder.runnerForClass(JUnit3Builder.java:11)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runner.Computer.getRunner(Computer.java:40)
+	at org.junit.runner.Computer$1.runnerForClass(Computer.java:31)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:101)
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:87)
+	at org.junit.runners.Suite.<init>(Suite.java:81)
+	at org.junit.runner.Computer.getSuite(Computer.java:28)
+	at org.junit.runner.Request.classes(Request.java:75)
+	at org.junit.runner.Request.classes(Request.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.common.junit4.JUnit4Reflector.createRequest(JUnit4Reflector.java:67)
+	at org.apache.maven.surefire.common.junit4.JUnit4ProviderUtil.createSuiteDescription(JUnit4ProviderUtil.java:111)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.createTestsDescription(JUnit4Provider.java:328)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:166)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ViewReportAction.<init>(ViewReportAction.java:26)
+	at edu.ncsu.csc.itrust.action.ViewReportAction.<init>(ViewReportAction.java:35)
+	at edu.ncsu.csc.itrust.unit.action.ViewReportActionTest.<init>(ViewReportActionTest.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at junit.framework.TestSuite.createTest(TestSuite.java:60)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:307)
+	at junit.framework.TestSuite.addTestsFromTestCase(TestSuite.java:150)
+	at junit.framework.TestSuite.<init>(TestSuite.java:129)
+	at org.junit.internal.runners.JUnit38ClassRunner.<init>(JUnit38ClassRunner.java:74)
+	at org.junit.internal.builders.JUnit3Builder.runnerForClass(JUnit3Builder.java:11)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runner.Computer.getRunner(Computer.java:40)
+	at org.junit.runner.Computer$1.runnerForClass(Computer.java:31)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:101)
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:87)
+	at org.junit.runners.Suite.<init>(Suite.java:81)
+	at org.junit.runner.Computer.getSuite(Computer.java:28)
+	at org.junit.runner.Request.classes(Request.java:75)
+	at org.junit.runner.Request.classes(Request.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.common.junit4.JUnit4Reflector.createRequest(JUnit4Reflector.java:67)
+	at org.apache.maven.surefire.common.junit4.JUnit4ProviderUtil.createSuiteDescription(JUnit4ProviderUtil.java:111)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.createTestsDescription(JUnit4Provider.java:328)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:166)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+Running edu.ncsu.csc.itrust.model.labtechnician.LabTechnicianControllerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.814 sec - in edu.ncsu.csc.itrust.model.labtechnician.LabTechnicianControllerTest
+Running edu.ncsu.csc.itrust.logger.TransactionLoggerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.297 sec - in edu.ncsu.csc.itrust.logger.TransactionLoggerTest
+Running edu.ncsu.csc.itrust.unit.HtmlEncoderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.ncsu.csc.itrust.unit.HtmlEncoderTest
+Running edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest
+Tests run: 7, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.851 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest
+testAdd(edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest)  Time elapsed: 0.169 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest.testAdd(LOINCCodeMySQLTest.java:59)
+
+testEdit(edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest)  Time elapsed: 0.099 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest.testEdit(LOINCCodeMySQLTest.java:70)
+
+testDelete(edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest)  Time elapsed: 0.084 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeMySQLTest.testDelete(LOINCCodeMySQLTest.java:96)
+
+Running edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.ncsu.csc.itrust.unit.model.loinccode.LOINCCodeTest
+Running edu.ncsu.csc.itrust.unit.model.emergencyRecord.EmergencyRecordTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec - in edu.ncsu.csc.itrust.unit.model.emergencyRecord.EmergencyRecordTest
+Running edu.ncsu.csc.itrust.unit.model.emergencyRecord.EmergencyRecordMySQLTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.647 sec - in edu.ncsu.csc.itrust.unit.model.emergencyRecord.EmergencyRecordMySQLTest
+Running edu.ncsu.csc.itrust.unit.model.user.UserTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec - in edu.ncsu.csc.itrust.unit.model.user.UserTest
+Running edu.ncsu.csc.itrust.unit.model.user.UserDataTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec - in edu.ncsu.csc.itrust.unit.model.user.UserDataTest
+Running edu.ncsu.csc.itrust.unit.model.ndcode.NDCCodeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.ncsu.csc.itrust.unit.model.ndcode.NDCCodeTest
+Running edu.ncsu.csc.itrust.unit.model.ndcode.NDCCodeMySQLTest
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.102 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.ndcode.NDCCodeMySQLTest
+testNDCodeMySQL(edu.ncsu.csc.itrust.unit.model.ndcode.NDCCodeMySQLTest)  Time elapsed: 0.084 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.ndcode.NDCCodeMySQLTest.testNDCodeMySQL(NDCCodeMySQLTest.java:41)
+
+Running edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisControllerTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.199 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisControllerTest
+testController(edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisControllerTest)  Time elapsed: 0.198 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisControllerTest.testController(DiagnosisControllerTest.java:58)
+
+Running edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisTest
+Running edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisFormTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.159 sec - in edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisFormTest
+Running edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest
+Tests run: 8, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.682 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest
+testAdd(edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest)  Time elapsed: 0.085 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Cannot add null ICDCode
+	at edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest.testAdd(DiagnosisMySQLTest.java:64)
+
+testRemove(edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest)  Time elapsed: 0.076 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest.testRemove(DiagnosisMySQLTest.java:135)
+
+testUpdate(edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest)  Time elapsed: 0.09 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Cannot update null ICDCode
+	at edu.ncsu.csc.itrust.unit.model.diagnosis.DiagnosisMySQLTest.testUpdate(DiagnosisMySQLTest.java:84)
+
+Running edu.ncsu.csc.itrust.unit.model.patient.PatientDataTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec - in edu.ncsu.csc.itrust.unit.model.patient.PatientDataTest
+Running edu.ncsu.csc.itrust.unit.model.prescription.PrescriptionMySQLTest
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.867 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.prescription.PrescriptionMySQLTest
+testAddUpdateAndDelete(edu.ncsu.csc.itrust.unit.model.prescription.PrescriptionMySQLTest)  Time elapsed: 0.113 sec  <<< ERROR!
+java.sql.SQLException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.prescription.PrescriptionMySQLTest.testAddUpdateAndDelete(PrescriptionMySQLTest.java:163)
+
+Running edu.ncsu.csc.itrust.unit.model.prescription.PrescriptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.ncsu.csc.itrust.unit.model.prescription.PrescriptionTest
+Running edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeTest
+Running edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeMySQLTest
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.168 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeMySQLTest
+testDiabolicals(edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeMySQLTest)  Time elapsed: 0.083 sec  <<< FAILURE!
+junit.framework.AssertionFailedError
+	at edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeMySQLTest.testDiabolicals(ICDCodeMySQLTest.java:111)
+
+testICDCodeMySQL(edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeMySQLTest)  Time elapsed: 0.077 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.icdcode.ICDCodeMySQLTest.testICDCodeMySQL(ICDCodeMySQLTest.java:44)
+
+Running edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec - in edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureTest
+Running edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureFormTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.563 sec - in edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureFormTest
+Running edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest
+Tests run: 9, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 1.423 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest
+testUpdateInvalid(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest)  Time elapsed: 0.167 sec  <<< FAILURE!
+java.lang.AssertionError: Should throw exception when updating invalid lab procedure
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest.testUpdateInvalid(LabProcedureMySQLTest.java:253)
+
+testAdd(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest)  Time elapsed: 0.136 sec  <<< FAILURE!
+java.lang.AssertionError: Adding lab procedure should not throw error: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest.testAdd(LabProcedureMySQLTest.java:174)
+
+testAddInvalid(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest)  Time elapsed: 0.119 sec  <<< ERROR!
+java.lang.NullPointerException
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest.testAddInvalid(LabProcedureMySQLTest.java:208)
+
+testUpdate(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest)  Time elapsed: 0.126 sec  <<< FAILURE!
+java.lang.AssertionError: Shouldn't throw exception when updating lab procedure: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureMySQLTest.testUpdate(LabProcedureMySQLTest.java:229)
+
+Running edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest
+Tests run: 13, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest
+testInvalidResults(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field results
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidResults(LabProcedureValidatorTest.java:143)
+
+testInvalidLabTechnicianID(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field lab technician ID
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidLabTechnicianID(LabProcedureValidatorTest.java:127)
+
+testInvalidHcpMID(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field HCP MID
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidHcpMID(LabProcedureValidatorTest.java:180)
+
+testInvalidCommentary(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field commentary
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidCommentary(LabProcedureValidatorTest.java:74)
+
+testInvalidConfidenceIntervalLower(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field confidence interval lower
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidConfidenceIntervalLower(LabProcedureValidatorTest.java:80)
+
+testInvalidConfidenceIntervalUpper(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field confidence interval upper
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidConfidenceIntervalUpper(LabProcedureValidatorTest.java:88)
+
+testInvalidStatus(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid status
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidStatus(LabProcedureValidatorTest.java:165)
+
+testInvalidLabProcedureCode(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field lab procedure code
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidLabProcedureCode(LabProcedureValidatorTest.java:96)
+
+testValidLabProcedure(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Valid lab procedure wasn't validated. Error: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testValidLabProcedure(LabProcedureValidatorTest.java:67)
+
+testInvalidUpdatedDate(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field updated date
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidUpdatedDate(LabProcedureValidatorTest.java:174)
+
+testInvalidLabProcedureID(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field lab procedure ID
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidLabProcedureID(LabProcedureValidatorTest.java:106)
+
+testInvalidPriority(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field priority
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidPriority(LabProcedureValidatorTest.java:135)
+
+testInvalidOfficeVisitID(edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Validator should catch invalid field office visit ID
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.tryValidateWithInvalidField(LabProcedureValidatorTest.java:203)
+	at edu.ncsu.csc.itrust.unit.model.labProcedure.LabProcedureValidatorTest.testInvalidOfficeVisitID(LabProcedureValidatorTest.java:119)
+
+Running edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest
+Tests run: 16, Failures: 14, Errors: 0, Skipped: 0, Time elapsed: 1.458 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest
+testValidChild(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.087 sec  <<< FAILURE!
+java.lang.AssertionError: Should be no error!
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testValidChild(OfficeVisitValidatorTest.java:491)
+
+testInvalidHeadCircumference(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.076 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidHeadCircumference(OfficeVisitValidatorTest.java:550)
+
+testInvalidTriglyceride(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.118 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidTriglyceride(OfficeVisitValidatorTest.java:418)
+
+testValidOfficeVisit(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.092 sec  <<< FAILURE!
+java.lang.AssertionError: Should be no error!
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testValidOfficeVisit(OfficeVisitValidatorTest.java:68)
+
+testInvalidApptID(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.08 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidApptID(OfficeVisitValidatorTest.java:113)
+
+testInvalidHeight(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.096 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidHeight(OfficeVisitValidatorTest.java:243)
+
+testInvalidLength(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.087 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidLength(OfficeVisitValidatorTest.java:519)
+
+testInvalidWeight(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.089 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidWeight(OfficeVisitValidatorTest.java:208)
+
+testInvalidBloodPressure(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.077 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidBloodPressure(OfficeVisitValidatorTest.java:348)
+
+testSetInvalidHospital(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.141 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testSetInvalidHospital(OfficeVisitValidatorTest.java:142)
+
+testInvalidHDL(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.091 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidHDL(OfficeVisitValidatorTest.java:383)
+
+testInvalidHSS(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.074 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidHSS(OfficeVisitValidatorTest.java:278)
+
+testInvalidLDL(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.098 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidLDL(OfficeVisitValidatorTest.java:453)
+
+testInvalidPSS(edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest)  Time elapsed: 0.098 sec  <<< FAILURE!
+java.lang.AssertionError: No error thrown
+	at edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitValidatorTest.testInvalidPSS(OfficeVisitValidatorTest.java:313)
+
+Running edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitSQLLoaderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 sec - in edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitSQLLoaderTest
+Running edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 sec - in edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitTest
+Running edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitMySQLTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.298 sec - in edu.ncsu.csc.itrust.unit.model.officeVisit.OfficeVisitMySQLTest
+Running edu.ncsu.csc.itrust.unit.model.medicalProcedure.MedicalProcedureTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.ncsu.csc.itrust.unit.model.medicalProcedure.MedicalProcedureTest
+Running edu.ncsu.csc.itrust.unit.model.medicalProcedure.MedicalProcedureMySQLTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec - in edu.ncsu.csc.itrust.unit.model.medicalProcedure.MedicalProcedureMySQLTest
+Running edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationMySQLTest
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.454 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationMySQLTest
+testAdd(edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationMySQLTest)  Time elapsed: 0.068 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationMySQLTest.testAdd(ImmunizationMySQLTest.java:75)
+
+testUpdate(edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationMySQLTest)  Time elapsed: 0.068 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationMySQLTest.testUpdate(ImmunizationMySQLTest.java:143)
+
+Running edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest
+testValidationBadCodeZeroLength(edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError
+	at edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest.testValidationBadCodeZeroLength(ImmunizationValidatorTest.java:62)
+
+testCorrectValidation(edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError
+	at edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest.testCorrectValidation(ImmunizationValidatorTest.java:34)
+
+testValidationBadCodeLength(edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.AssertionError
+	at edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationValidatorTest.testValidationBadCodeLength(ImmunizationValidatorTest.java:49)
+
+Running edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in edu.ncsu.csc.itrust.unit.model.immunization.ImmunizationTest
+Running edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeTest
+Running edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeMySQLTest
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.145 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeMySQLTest
+testDiabolicals(edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeMySQLTest)  Time elapsed: 0.072 sec  <<< FAILURE!
+junit.framework.AssertionFailedError
+	at edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeMySQLTest.testDiabolicals(CPTCodeMySQLTest.java:111)
+
+testCPTCodeMySQL(edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeMySQLTest)  Time elapsed: 0.066 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeMySQLTest.testCPTCodeMySQL(CPTCodeMySQLTest.java:41)
+
+Running edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeValidatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in edu.ncsu.csc.itrust.unit.model.cptcode.CPTCodeValidatorTest
+Running edu.ncsu.csc.itrust.unit.ErrorListTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.ncsu.csc.itrust.unit.ErrorListTest
+Running edu.ncsu.csc.itrust.unit.BeanBuilderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec - in edu.ncsu.csc.itrust.unit.BeanBuilderTest
+Running edu.ncsu.csc.itrust.unit.LocalizationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.ncsu.csc.itrust.unit.LocalizationTest
+Running edu.ncsu.csc.itrust.unit.EmailUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.ncsu.csc.itrust.unit.EmailUtilTest
+Running edu.ncsu.csc.itrust.unit.action.ChangePasswordActionTest
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ChangePasswordAction.changePassword(ChangePasswordAction.java:63)
+	at edu.ncsu.csc.itrust.unit.action.ChangePasswordActionTest.testChangePassword(ChangePasswordActionTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ChangePasswordAction.changePassword(ChangePasswordAction.java:66)
+	at edu.ncsu.csc.itrust.unit.action.ChangePasswordActionTest.testChangePassword(ChangePasswordActionTest.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ChangePasswordAction.changePassword(ChangePasswordAction.java:66)
+	at edu.ncsu.csc.itrust.unit.action.ChangePasswordActionTest.testChangePassword(ChangePasswordActionTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.ChangePasswordAction.changePassword(ChangePasswordAction.java:49)
+	at edu.ncsu.csc.itrust.unit.action.ChangePasswordActionTest.testChangePassword(ChangePasswordActionTest.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 sec - in edu.ncsu.csc.itrust.unit.action.ChangePasswordActionTest
+Running edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest
+Tests run: 7, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.567 sec <<< FAILURE! - in edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest
+testDeleteInteraction(edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest)  Time elapsed: 0.057 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest.testDeleteInteraction(DrugInteractionActionTest.java:47)
+
+testGetInteractions2(edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest)  Time elapsed: 0.197 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest.testGetInteractions2(DrugInteractionActionTest.java:74)
+
+testReportInteraction(edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest)  Time elapsed: 0.071 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest.testReportInteraction(DrugInteractionActionTest.java:35)
+
+testReportAlreadyAdded(edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest)  Time elapsed: 0.059 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest.testReportAlreadyAdded(DrugInteractionActionTest.java:107)
+
+testEvilDAOFactory(edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest)  Time elapsed: 0.059 sec  <<< ERROR!
+edu.ncsu.csc.itrust.exception.FormValidationException: This form has not been validated correctly. The following field are not properly filled in: []
+	at edu.ncsu.csc.itrust.unit.action.DrugInteractionActionTest.testEvilDAOFactory(DrugInteractionActionTest.java:127)
+
+Running edu.ncsu.csc.itrust.unit.action.AddApptRequestActionTest
+edu.ncsu.csc.itrust.exception.DBException: A database exception has occurred. Please see the log in the console for stacktrace
+	at edu.ncsu.csc.itrust.model.old.dao.mysql.TransactionDAO.logTransaction(TransactionDAO.java:99)
+	at edu.ncsu.csc.itrust.logger.TransactionLogger.logTransaction(TransactionLogger.java:40)
+	at edu.ncsu.csc.itrust.action.AddApptRequestAction.addApptRequest(AddApptRequestAction.java:50)
+	at edu.ncsu.csc.itrust.action.AddApptRequestAction.addApptRequest(AddApptRequestAction.java:36)
+	at edu.ncsu.csc.itrust.unit.action.AddApptRequestActionTest.testAddApptRequest(AddApptRequestActionTest.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+Build was aborted
+Aborted by [8mha:////4BlTwwKd8fgdgJg0P4ugmVE6EB5lkSbzfk5BKilPzAUfAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Recording test results
+[PostBuildScript] - Execution post build scripts.
+[iTrust-Fuzzer] $ /bin/sh -xe /tmp/hudson608368106733655268.sh
++ cd /var/lib/jenkins/BuildTools/UselessTest
++ mvn exec:java -Dexec.mainClass=test.detector.UselessTestDetectorMain
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for test.detector:UselessTest:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 9, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UselessTest 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ UselessTest ---
+Number of Useless Tests : 134 
+
+Number of Failed Tests : 589 
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.293s
+[INFO] Finished at: Fri Mar 17 21:22:13 EDT 2017
+[INFO] Final Memory: 11M/173M
+[INFO] ------------------------------------------------------------------------
+Finished: ABORTED
