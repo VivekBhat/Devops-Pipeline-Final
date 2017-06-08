@@ -1,0 +1,12 @@
+---
+home_path: /home/{{ansible_user}}
+jenkins_path: /var/lib/jenkins
+jenkins_user: admin
+jenkins_password: admin
+jenkins_url: http://localhost:8080
+jenkins_params:
+  url_username: "{{jenkins_user}}"
+  url_password: "{{jenkins_password}}"
+  url: "{{jenkins_url}}"
+  validate_certs: no
+ssh_key: "{{lookup('file', ansible_ssh_private_key_file)}}"

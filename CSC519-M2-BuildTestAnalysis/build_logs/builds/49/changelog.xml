@@ -1,0 +1,22 @@
+commit 844ce63bff3a47ed9d07bd8ffaee5d5df62da2ea
+tree e1ddb6666afd457888a02daf571223034e58150f
+parent c6f3238ffb87cc3f2f3329aee0be2a1dd9f4f149
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:36:28 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:36:28 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 48
+
+
+
+:100644 100644 42b46196b0d1dc05691e0f895f7036e9bdd94e9c 908adb5027da8c743b15252307cbc85dd2ab7689 M	iTrust/src/main/edu/ncsu/csc/itrust/HtmlEncoder.java
+:100644 100644 bffe9fd8b7679401c28fe468734b00a9849bb52a 560a0828667df4da1baaff28c31eaba1ed10d5aa M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddLTAction.java
+:100644 100644 057b0edc7b9412377dcbfbb009dc0127dc54cf7c f5c05f1a40b214c08b7a5b4e046fe0eac2b31a19 M	iTrust/src/main/edu/ncsu/csc/itrust/action/DeclareHCPAction.java
+:100644 100644 8f49bfa046d060c0364b5cc63506a125f0b71218 76a346ee5a35e16717d2ac19381756be5153079c M	iTrust/src/main/edu/ncsu/csc/itrust/action/LoginFailureAction.java
+:100644 100644 6968cd2beb4f2e1ac6d3d8fbd4ec05aa9fd10ce5 0cb726a1c8bb0ed9919d258b369bd1facf60299c M	iTrust/src/main/edu/ncsu/csc/itrust/action/PatientRoomAssignmentAction.java
+:100644 100644 ba45c2f7d367f98db4e7164e9b1044cbcda2adf0 b2acd9ddaaac8118da3d5c984920b09c38b57d3f M	iTrust/src/main/edu/ncsu/csc/itrust/action/SendMessageAction.java
+:100644 100644 8c86ef139fd775ed6d416ff663d7b7eaff573804 309d3b644554dfaedff3a9db30154a655a654e34 M	iTrust/src/main/edu/ncsu/csc/itrust/action/UpdateReasonCodeListAction.java
+:100644 100644 ffa06d5d2339482abf7df01f926a87c13467c5b2 6107d7502883e50ad8de47027d019f758f6c191e M	iTrust/src/main/edu/ncsu/csc/itrust/controller/NavigationController.java
+:100644 100644 d8ac2b69504a5d7a8d43620e090d850cb41a84cc 54d4a532d3ac04b2ff60f40a3666b9abe0d7e20c M	iTrust/src/main/edu/ncsu/csc/itrust/exception/FormValidationException.java
+:100644 100644 b969fd697335df937ed6e27c400a44bf77c6380c 54a36f9d3981d4d985342caa08124232ac288ca1 M	iTrust/src/main/edu/ncsu/csc/itrust/report/DemographicReportFilter.java
+:100644 100644 5e908fbeb6de17845cc3007e29bb1e033bae49b6 7e1119c329d8fa5eb5b1d15876a855f49f33ff50 M	iTrust/src/main/edu/ncsu/csc/itrust/server/FindExpertServlet.java
+:100644 100644 76f45482bcf8c2703adf72f46647d23f5028a9d6 ec788b00fddae528acf97104b5a6f9d36e392039 M	iTrust/src/main/edu/ncsu/csc/itrust/server/SessionTimeoutListener.java

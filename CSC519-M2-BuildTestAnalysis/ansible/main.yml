@@ -1,0 +1,11 @@
+---
+- name: Build Server
+  hosts: jenkins
+  become: yes
+  vars:
+    jenkins_path: /var/lib/jenkins
+  roles:
+    - mysql
+    - node
+    - jenkins
+    - config

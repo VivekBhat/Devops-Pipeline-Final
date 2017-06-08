@@ -1,0 +1,21 @@
+commit 77f964bd5cfe0dd433e365c9edc7123cfd30b5b5
+tree 5afc42317c6d4465d44875919af0387a5e250809
+parent 5f1794058c8244b056d9f632885568cf55db842c
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:43:58 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:43:58 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 95
+
+
+
+:100644 100644 3d1c1efa67370a9b927abdca6a6c1190a8faeabe e93f21d74c4d9bab9c150e63037d8e1f6d8d4752 M	iTrust/src/main/edu/ncsu/csc/itrust/BeanBuilder.java
+:100644 100644 91b1590e7e5712531bab4ab591e0dc4d0c3a5e36 29799eff18f13507fd8f849bc8546cce0485255f M	iTrust/src/main/edu/ncsu/csc/itrust/XmlGenerator.java
+:100644 100644 bd9a5adf03e15f7138fc86b0e1c1a076b473ac4b 4ed3d85e561cdd4d1d88346cbcb9b2fb56d464e0 M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddRemoteMonitoringDataAction.java
+:100644 100644 502104cfccf2af90eac4f90fd2fe5c935bd8c77b 90e6a9aa645093c14eb7c8be3ef9415482e0d454 M	iTrust/src/main/edu/ncsu/csc/itrust/action/EditApptTypeAction.java
+:100644 100644 9763123cd6d7d40000f1aa9e9481ec9820e9ba3c 7b6414b2e66af7aa2a84fef0eb34fcfe84ee6f8b M	iTrust/src/main/edu/ncsu/csc/itrust/action/GenerateCalendarAction.java
+:100644 100644 8f49bfa046d060c0364b5cc63506a125f0b71218 06a49c989f139b2778382c3d86425b533274cc57 M	iTrust/src/main/edu/ncsu/csc/itrust/action/LoginFailureAction.java
+:100644 100644 f97098cc3abe06ec86eb40ed42ea52008d6b2722 d45f6805253559c6f9d8e559fa7fda3c99bfe1f9 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyReportRequestsAction.java
+:100644 100644 cf7409a9d81d7d448e73fe0cee779e1470c6aa14 e9de4991ab86a00c39056f9817b28f9f1d02bb6a M	iTrust/src/main/edu/ncsu/csc/itrust/controller/diagnosis/DiagnosisController.java
+:100644 100644 1ae7610161986896ca34e20c4bd58260c89d3bf3 a1fd10658e610112a172cc996ee2fcfe53a0e3ea M	iTrust/src/main/edu/ncsu/csc/itrust/parser/ICDCodeParser.java
+:100644 100644 b969fd697335df937ed6e27c400a44bf77c6380c dbd1c23010c8cfa70d8af97388d50a965ec8f89e M	iTrust/src/main/edu/ncsu/csc/itrust/report/DemographicReportFilter.java
+:100644 100644 c81cf08f0d496e224fa68f51409ef6be5ad3b1ea c08aef2c72fc08612f9c8a1a01de34016fcf79ed M	iTrust/src/main/edu/ncsu/csc/itrust/report/ReportFilter.java

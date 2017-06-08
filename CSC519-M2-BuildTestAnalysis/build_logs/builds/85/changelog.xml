@@ -1,0 +1,18 @@
+commit c2e96494c2ac0bf5752c505f9aec7a06c87b0f2a
+tree d2895cd1209e2a937f27ff5eaf246b792e135b18
+parent b6f8f59f3c6cbe075810ad80ee62d0f446537f7a
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:42:15 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:42:15 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 84
+
+
+
+:100644 100644 908adb5027da8c743b15252307cbc85dd2ab7689 e00cfdcde6ba0f5d1ce35848fced6de5782bb5ab M	iTrust/src/main/edu/ncsu/csc/itrust/HtmlEncoder.java
+:100644 100644 28aa02f56bcef7357d324965b0a52f39b5d0cb1d ac45c133736bdd4570e809a7d7042c78c3e43fc6 M	iTrust/src/main/edu/ncsu/csc/itrust/RandomPassword.java
+:100644 100644 7b3d881fd032a70b8af790f2219b059ade613c91 4868a7449d53620ed4c0bfe67f654de012831464 M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddPatientFileAction.java
+:100644 100644 ad97e46dd3a06f0481fcb8deeb7cd364a0874e75 057b0edc7b9412377dcbfbb009dc0127dc54cf7c M	iTrust/src/main/edu/ncsu/csc/itrust/action/DeclareHCPAction.java
+:100644 100644 b7af734279ced5552fb638384fe7c7a602ad2be9 4692b5954f84ab01c79816cc26d23631dc946cb6 M	iTrust/src/main/edu/ncsu/csc/itrust/action/PayBillAction.java
+:100644 100644 846965c5a119c9de1bb517734699609431c17294 9b53c3bdaf9ef359c5c3f288ea081dda1aa59a69 M	iTrust/src/main/edu/ncsu/csc/itrust/action/VerifyClaimAction.java
+:100644 100644 3df5dab6d031822f05426ab65181e817e4bb315f 6134ffdea6f3c795052938d031f52f3878ad3b40 M	iTrust/src/main/edu/ncsu/csc/itrust/action/base/AddEntryAction.java
+:100644 100644 94316ccb4950ba3f8b6f54e723ffa05d4bd276f0 1ed201f7714cebc68faeb8f6168d98e9deebd9d5 M	iTrust/src/main/edu/ncsu/csc/itrust/server/RecordsReleaseServlet.java

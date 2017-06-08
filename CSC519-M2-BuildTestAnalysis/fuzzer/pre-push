@@ -1,0 +1,14 @@
+#!/bin/sh
+export BRANCHNAME=$(git rev-parse --abbrev-ref HEAD)
+export MASTER_SHA1=$(git rev-parse master)
+# MASTER_SHA1 : last master commit that has been pushed
+# export MASTER_SHA1=af679547fb15b5151178d8f5688bf583913caaa9
+# SHA1 = last fuzzer commit
+export SHA1=$(git rev-parse fuzzer)
+export GITHUB_URL=$(git config --get remote.origin.url | sed 's/.git$//')
+export JENKINS_IP={{HOST_IP}}
+
+if [ $BRANCHNAME = 'master' ]; then
+        curl "http://$JENKINS_IP:8080/git/notifyCommit?url=$GITHUB_URL&branches=master&sha1=HEAD"
+        node iTrust/fuzzer.js
+fi

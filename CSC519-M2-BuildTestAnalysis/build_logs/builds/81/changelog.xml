@@ -1,0 +1,23 @@
+commit caff8bd1a6b8f179ca40089ebbf600021b71a2d5
+tree 41f6f85abc46304fbd0ba296b9ed21bdb2c475c8
+parent bc9a7a4694623f7b96439dd19579c372ba81b29c
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:41:36 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:41:36 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 80
+
+
+
+:100644 100644 46979c35afe135d1c060772ea8675ce01399dec9 50f1df294478f42ba0d20b85021e039322424196 M	iTrust/src/main/edu/ncsu/csc/itrust/Localization.java
+:100644 100644 e6bd4ad74b80d8e1d7342caf699a9c5cb6088ba7 ae54a82aa2445f82461f59cb8047103628ab2820 M	iTrust/src/main/edu/ncsu/csc/itrust/XmlGenerator.java
+:100644 100644 c75fb999c94d19e9fede396c9083a1a82c21f3a1 cc6c8b5088766a18111266743b01d9971c941fc6 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ActivityFeedAction.java
+:100644 100644 09cab8df5677d653910a2b3aa613a9daa1120f20 25034963c71a33c1e96c827c7a99972927d5c046 M	iTrust/src/main/edu/ncsu/csc/itrust/action/AddHCPAction.java
+:100644 100644 7d2beee029089a90787957f8126f41d54f21dbee 3b1988630319be7dc1a6c7ea170610e44e6a1f35 M	iTrust/src/main/edu/ncsu/csc/itrust/action/EventLoggingAction.java
+:100644 100644 decc1453c11e417bd8a86aaff913e919a7ca0280 d4dd1585ffea7503a5629bb65b02567348ef2e42 M	iTrust/src/main/edu/ncsu/csc/itrust/action/FindExpertAction.java
+:100644 100644 7b6414b2e66af7aa2a84fef0eb34fcfe84ee6f8b 598a48c7956b3475e839afd65770dd0d9b47a077 M	iTrust/src/main/edu/ncsu/csc/itrust/action/GenerateCalendarAction.java
+:100644 100644 e98b363e0ce6356bf0edc03a487cfc295a7fef49 20e1d1d1eb06783bff034e05525b506e089c1040 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ManageHospitalAssignmentsAction.java
+:100644 100644 91c6804589861c4f40a45d60d22fae28b4fd7abc 33e3908419ef37b7d2adafbd0c31f5d09c487aed M	iTrust/src/main/edu/ncsu/csc/itrust/controller/cptcode/CPTCodeController.java
+:100644 100644 c093b6731b5d0a051a8af33ba822814a5d889540 86e94662eec3f29596d864e99f503d93882135ff M	iTrust/src/main/edu/ncsu/csc/itrust/controller/labtechnician/LabTechnicianController.java
+:100644 100644 0986349ed4241efcb4633f237b950f53a0a0d46f 3c16e65e71eb293d76e1606cfc3ffd4c7cde24a9 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/ndcode/NDCCodeController.java
+:100644 100644 31e3663cff099d62f5d78ee232132b29a78472b9 1b47f3035001182e22a65b66c819f94a153a706b M	iTrust/src/main/edu/ncsu/csc/itrust/controller/user/UserController.java
+:100644 100644 15a884f0489087fc899d140af13419301a22d7d0 7384123cb3cd3e898e1b8358ad19eea84af417d2 M	iTrust/src/main/edu/ncsu/csc/itrust/tags/StateSelect.java

@@ -1,0 +1,17 @@
+commit d4cd5f4dda429d87b90b1b6d4c445775a11596dd
+tree fd2f24067b05454e597342f1e253a124eada4070
+parent 934e863c158c1bff6f18b17b8112d4c7fa56cd3f
+author Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:32:58 -0400
+committer Samim Mirhosseini <samim.mirhoseini@gmail.com> 2017-03-17 17:32:58 -0400
+
+    Fuzzing master:090cc112d47ca55af84aa20d5e5bf4a077b09c41: # 27
+
+
+
+:100644 100644 598a48c7956b3475e839afd65770dd0d9b47a077 7b6414b2e66af7aa2a84fef0eb34fcfe84ee6f8b M	iTrust/src/main/edu/ncsu/csc/itrust/action/GenerateCalendarAction.java
+:100644 100644 df65c160cc485c6afa9e734dd7d8a3ad786b478d 6d6b78f9e015ff4596bfc507a0f68e28b02282b6 M	iTrust/src/main/edu/ncsu/csc/itrust/action/GetUserNameAction.java
+:100644 100644 f2aac5b09fa8b052124125b11626cce6182ed7f4 01cf10ba2ac174be03986a0de133b902a88c3d72 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ResetPasswordAction.java
+:100644 100644 2d0dbf5158c589bd3fde8ac488095ccef007714a 61f589f07c487c479b23ac92ba6ea4b74e33f62c M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyAccessLogAction.java
+:100644 100644 7b46837aae0fbf5a5b117e65d0dfaa5f227f68d0 f97098cc3abe06ec86eb40ed42ea52008d6b2722 M	iTrust/src/main/edu/ncsu/csc/itrust/action/ViewMyReportRequestsAction.java
+:100644 100644 3c16e65e71eb293d76e1606cfc3ffd4c7cde24a9 b20374efa26a0f6336f57688e97a167daeb3af51 M	iTrust/src/main/edu/ncsu/csc/itrust/controller/ndcode/NDCCodeController.java
+:100644 100644 96c806ccb7eab3ee75e1f0b3b5fe3c03ce2d39f4 98316f49dc0893d5f543abda4b192f15bc8d1392 M	iTrust/src/main/edu/ncsu/csc/itrust/exception/DBException.java
