@@ -8,9 +8,9 @@ Names:
   - Nikhila Balaji (nbalaji)
 
 ## Link To Sceencasts
-####[Jenkins and build jobs setup](https://youtu.be/xJZqW3mR4yQ)
-####[Running Fuzzing on iTrust](https://youtu.be/y2lkHzjDEy8)  
-####[Running Checkbox.io build on Jenkins](https://youtu.be/bmOlREHurAg)
+#### [Jenkins and build jobs setup](https://youtu.be/xJZqW3mR4yQ)
+#### [Running Fuzzing on iTrust](https://youtu.be/y2lkHzjDEy8)  
+#### [Running Checkbox.io build on Jenkins](https://youtu.be/bmOlREHurAg)
 
 
 ## Build Server
@@ -21,7 +21,7 @@ Names:
 
 	![alt text](https://github.ncsu.edu/smirhos/CSC519-M-BuildTestAnalysis/blob/master/Resources/itrust_xml.png "itrust.xml screenshot") 
 
-   * <b>Checkbox.xml </b>
+   *  <b>Checkbox.xml </b>
 
 	![alt text](https://github.ncsu.edu/smirhos/CSC519-M-BuildTestAnalysis/blob/master/Resources/checkboxio_xml.png "checkboxio.xml screenshot") 
 
@@ -34,7 +34,7 @@ Names:
 ![Image 2](https://github.ncsu.edu/smirhos/CSC519-M-BuildTestAnalysis/blob/master/Resources/flowchart2.PNG)
 
 
-###Testing Component [iTrust]
+### Testing Component [iTrust]
 
 * Test suites, coverage and test results [20%]
 
@@ -60,7 +60,7 @@ Names:
 			* A string is replaced with the text <i>“ThisIsANotSoRandomString”</i>. And we use a condition to avoid replacing java annotations in the source files.
 
 
-##Analysis Component [checkbox.io]
+## Analysis Component [checkbox.io]
 
 **Max condition:** (greater than 8) 
 
@@ -71,7 +71,8 @@ Names:
 Fail the build if these occur - build job on checkbox.xml 
 
 <hr>
-##Extra credit [45%]
+
+## Extra credit [45%]
 * Extend the test-stability-plugin to calculate and display "useless" tests in Jenkins. (20 points) - Attempted
 	
 	Generating a report using the results from test-stability plugin- not displaying currently in jenkins  
